@@ -21,6 +21,8 @@ int populacao1;
 float area1;
 float pib1;
 int pontoturisticos1;
+float pibpercap1;
+float densidade1;
 
 // Variavies do Jogador 2
 char estado2;
@@ -30,6 +32,8 @@ int populacao2;
 float area2;
 float pib2;
 int pontoturisticos2;
+float pibpercap2;
+float densidade2;
 
 
 
@@ -67,7 +71,9 @@ scanf("%f" , &pib2);
 printf("Quantos pontos turísticos a sua cidade possui: ");
 scanf("%d" , &pontoturisticos2);
 
-
+//calculos do Pib per capita e densidade populacional do jogador 1
+pibpercap1 = (float) pib1 / populacao1;
+densidade1 = (float) populacao1 / area1;
 
 //carta do jogador 1
 printf("Jogador 1 está é sua carta:\n");
@@ -78,6 +84,12 @@ printf("A população da sua cidade: %d\n" , populacao1);
 printf("O tamanho da sua cidade: %.2f km2\n", area1);
 printf("O PIB da sua cidade: %.2f Bilhões R$\n" , pib1);
 printf("Pontos turísticos da sua cidade: %d\n" , pontoturisticos1);
+printf("A Densidade Populacional é: %.2f\n" , densidade1);
+printf("O PIB per Capita da sua cidade é: %.2f\n" , pibpercap1);
+
+//calculos do Pib per capita e densidade populacional do jogador 2
+pibpercap2 = (float) pib2 / populacao2;
+densidade2 = (float) populacao2 / area2;
 
 
 //carta do jogador 2
@@ -88,8 +100,9 @@ printf("Nome da sua cidade: %s\n" , nomedacidade2);
 printf("A população da sua cidade: %d\n" , populacao2);
 printf("O tamanho da sua cidade: %.2f km2\n", area2);
 printf("O PIB da sua cidade: %.2f Bilhões R$\n" , pib2);
-printf("Pontos turísticos da sua cidade: %d" , pontoturisticos2);
-
+printf("Pontos turísticos da sua cidade: %d\n" , pontoturisticos2);
+printf("A Densidade Populacional é: %.2f\n" , densidade2);
+printf("O PIB per Capita da sua cidade é: %.2f\n" , pibpercap2);
 
 
 
